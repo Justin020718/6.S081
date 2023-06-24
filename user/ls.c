@@ -44,6 +44,7 @@ ls(char *path)
   switch(st.type){
   case T_FILE:
     printf("%s %d %d %l\n", fmtname(path), st.type, st.ino, st.size);
+    printf("This is a file!\n");
     break;
 
   case T_DIR:
