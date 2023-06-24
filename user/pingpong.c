@@ -16,7 +16,7 @@ int main(int argc, char*argv[])
         write(p[1], "ping\n", 5);
         read(p[0], buf1, sizeof(buf1));
         wait(&status);
-        fprintf(1, "%d: recieved pong\n",pid);
+        fprintf(1, "%d: received pong\n",pid);
     }
     else{
         char buf2[10];
@@ -24,7 +24,7 @@ int main(int argc, char*argv[])
         // child proc
         write(p[1], "pong\n", 5);
         read(p[0], buf2, sizeof(buf2));
-        fprintf(1, "%d: recieved ping\n",pid);
+        fprintf(1, "%d: received ping\n",pid);
         exit(0);
     }
     close(p[0]);
