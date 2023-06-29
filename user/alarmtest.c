@@ -45,7 +45,9 @@ test0()
   int i;
   printf("test0 start\n");
   count = 0;
+  // printf("a0=%p, a1=%p\n");
   sigalarm(2, periodic);
+  // printf("a0=%p, a1=%p\n");
   for(i = 0; i < 1000*500000; i++){
     if((i % 1000000) == 0)
       write(2, ".", 1);
